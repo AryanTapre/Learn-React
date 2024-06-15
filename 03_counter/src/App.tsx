@@ -13,6 +13,7 @@ function App() {
   function handleClick() {
     setCount(count += 1);
   }
+  
   function resetCounter() {
     setCount(0);
   }
