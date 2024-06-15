@@ -1,4 +1,4 @@
-
+//@ts-expect-error type error in setColor 
 function BarColor({setColor}) {
   return (
     <>
