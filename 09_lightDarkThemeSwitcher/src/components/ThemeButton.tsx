@@ -9,12 +9,13 @@ export default function ThemeBtn() {
                 type="checkbox"
                 value=""
                 className="sr-only peer"
+
                 onChange={(e) => {
                       if(e.currentTarget.checked) {
                          setDarkMode();
                       } else {
                         setLightMode();
-                        
+
                       }  
                 }}
             />
