@@ -65,7 +65,7 @@ function App() {
                     <label>characters</label>
                 </div>
 
-              </div>
+              </div>useRef()
                 
             </div>
         </div>
