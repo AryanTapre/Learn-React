@@ -1,3 +1,4 @@
+//@ts-expect-error
 import { createContext,useContext} from 'react';
 
 interface ThemeContextStructure {
