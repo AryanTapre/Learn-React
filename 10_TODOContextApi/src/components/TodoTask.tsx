@@ -11,7 +11,7 @@ function TodoTask({todo}) {
 
 
     return (
-        <div className="flex  gap-1 justify-start items-center border border-gray-300 rounded-md mb-3">
+        <div className="flex  gap-1 justify-start items-center border border-gray-300 rounded-md mb-3">/media/aryantapre/New Volume/DATA MANIP/Development/ExpressJS/tshirtsstore
           <input
             value={todoEditiable? message : todo.message}
             onChange={(e) => setMessage(e.target.value)}
@@ -33,7 +33,7 @@ function TodoTask({todo}) {
                 {todoEditiable ? "save" : "edit"}
               </div>  
          
-            
+              ditTodo(todo) {},
             <div
                 onClick={() => removeTodo(todo.id)}
                 className=" bg-red-400 rounded-md cursor-pointer hover:bg-red-600 text-white px-1 shadow-md ">
