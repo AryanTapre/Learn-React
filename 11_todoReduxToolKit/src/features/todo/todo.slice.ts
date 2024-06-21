@@ -1,5 +1,5 @@
-import {createSlice} from '@reduxjs/toolkit';
-import {addTodo, editTodo, removeTodo} from './todo.reducers.ts';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import { editTodo, removeTodo} from './todo.reducers.ts';
 
 export interface TodoItem {
     id:string,
@@ -8,13 +8,15 @@ export interface TodoItem {
 
 export const todoSlice = createSlice({
     name:"todo",
-    initialState:[{
-        id:"001",
-        message:"aryan-tapre"
-    }],
+    initialState:Array<TodoItem>,
     reducers : {
-        addTodoStore: addTodo,
+        addTodoStore:  (state,action:PayloadAction<TodoItem>) => {  
+            if(action.payload) {
+                state.push(action.payload);
+            }
+        },
         editTodoStore: editTodo,
+        //@ts-expect-error removeTodoStore
         removeTodoStore: removeTodo
     }
 })
